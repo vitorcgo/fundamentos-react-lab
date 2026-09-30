@@ -18,6 +18,8 @@ function App() {
     { id: 1, brand: "Ferrari", color: "Amarelo", km: 0 },
     { id: 2, brand: "KIA", color: "Branco", km: 200000 },
     { id: 3, brand: "Renault", color: "Azul", km: 32000 },
+    { id: 4, brand: "Tesla", color: "Preto", km: 12000 },
+    { id: 5, brand: "Toyota", color: "Prata", km: 85000 },
   ];
 
   // Função criada no componente pai e enviada para um filho por props.
