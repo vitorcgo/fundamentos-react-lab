@@ -386,6 +386,6 @@ Dessa forma, o fluxo de dados continua unidirecional (de cima para baixo), e a c
 
 ## Autor
 
-**Gustavo Barros**
+**Vitor Cavalcante**
 
 Projeto desenvolvido como atividade acadêmica para estudo dos fundamentos do React.
