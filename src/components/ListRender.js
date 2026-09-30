@@ -3,12 +3,21 @@ import { useState } from "react";
 const ListRender = () => {
   const [list] = useState(["Matheus", "Pedro", "Josias"]);
 
-  // Agora cada usuário possui um id estável.
-  const [users] = useState([
+  const [users, setUsers] = useState([
     { id: 1, name: "Matheus", age: 31 },
     { id: 2, name: "Jones", age: 19 },
     { id: 3, name: "Scorpion", age: 201 },
   ]);
+
+  // Gera um número de 0 a 3.
+  const deleteRandom = () => {
+    const randomNumber = Math.floor(Math.random() * 4);
+
+    // Recebe o estado anterior e cria um NOVO array sem o usuário sorteado.
+    setUsers((prevUsers) => {
+      return prevUsers.filter((user) => randomNumber !== user.id);
+    });
+  };
 
   return (
     <div>
@@ -25,6 +34,8 @@ const ListRender = () => {
           </li>
         ))}
       </ul>
+
+      <button onClick={deleteRandom}>Delete random user</button>
     </div>
   );
 };
