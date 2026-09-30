@@ -3,6 +3,7 @@ import city from "./assets/city.jpg";
 import ManageData from "./components/ManageData";
 import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
+import ShowUserName from "./components/ShowUserName";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      {/* props */}
+      <ShowUserName name="Matheus" />
     </div>
   );
 }
