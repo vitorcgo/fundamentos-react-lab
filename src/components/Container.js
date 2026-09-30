@@ -1,29 +1,14 @@
-/*
-  ==============================================================
-  COMPONENTE: Container
-  ==============================================================
+import React from "react";
 
-  OBJETIVO DIDÁTICO
-  Criar um componente capaz de envolver conteúdos diferentes sem
-  precisar conhecer antecipadamente o que será renderizado dentro.
+const Container = ({ children }) => {
+  return (
+    <div>
+      <h1>Conteúdo do componente pai:</h1>
 
-  CONCEITOS
-  - children
-  - composição de componentes
-  - reutilização
-
-  O QUE TESTAR
-  Use o mesmo Container em mais de um ponto e coloque conteúdos
-  diferentes dentro dele.
-
-  CSS DISPONÍVEL
-  .content-container, .content-container__label
-
-  TODO: faça o componente renderizar o conteúdo recebido via children.
-*/
-
-const Container = () => {
-  return null;
+      {/* Renderiza tudo o que foi colocado entre as tags de Container. */}
+      {children}
+    </div>
+  );
 };
 
 export default Container;
