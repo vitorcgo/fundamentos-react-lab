@@ -21,11 +21,7 @@ const ListRender = () => {
 
   return (
     <div>
-      <ul>
-        {list.map((item, i) => (
-          <li key={i}>{item}</li>
-        ))}
-      </ul>
+      <p>Total de usuários: {users.length}</p>
 
       <ul>
         {users.map((user) => (
