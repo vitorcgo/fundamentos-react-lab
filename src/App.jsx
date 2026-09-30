@@ -9,6 +9,7 @@ import CarDetails from "./components/CarDetails";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
 import MessageState from "./components/MessageState";
+import ChangeMessageState from "./components/ChangeMessageState";
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
   }
 
   const [message, setMessage] = useState();
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
 
 
 
@@ -74,7 +78,9 @@ function App() {
         </div>
       </Container>
 
+      {/* state lift */}
       <MessageState msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
 
 
     </div>

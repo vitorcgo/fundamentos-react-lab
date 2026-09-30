@@ -1,34 +1,15 @@
-/*
-  ==============================================================
-  COMPONENTE: ChangeMessageState
-  ==============================================================
+const ChangeMessageState = ({ handleMessage }) => {
+  // Dados locais utilizados pelos três botões.
+  const messages = ["Oi", "Olá", "Tudo bem?"];
 
-  OBJETIVO DIDÁTICO
-  Alterar, a partir de um componente filho, um state que pertence ao
-  componente pai.
-
-  CONCEITOS
-  - lifting state up
-  - função recebida por prop
-  - eventos
-  - callbacks
-  - fluxo de dados entre componentes
-
-  FLUXO ESPERADO
-  1. O App mantém o state da mensagem.
-  2. O App cria uma função capaz de alterar esse state.
-  3. A função é enviada para este componente por prop.
-  4. Botões chamam essa função com mensagens diferentes.
-  5. MessageState recebe o valor atualizado e o exibe.
-
-  CSS DISPONÍVEL
-  .message-actions, .message-button
-
-  TODO: crie a lista de mensagens e os botões responsáveis pela troca.
-*/
-
-const ChangeMessageState = () => {
-  return null;
+  return (
+    <div>
+      {/* Cada botão envia uma mensagem diferente para o componente pai. */}
+      <button onClick={() => handleMessage(messages[0])}>1</button>
+      <button onClick={() => handleMessage(messages[1])}>2</button>
+      <button onClick={() => handleMessage(messages[2])}>3</button>
+    </div>
+  );
 };
 
 export default ChangeMessageState;
